@@ -1,0 +1,37 @@
+﻿#彩種期數錄入
+01 00 * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs writeQishu
+
+#香港六合彩期數錄入
+05 00 01 * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs writeQishuHkmk6
+
+#自訂彩種開獎
+*/1 * * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs customLotteryOpen
+
+#打碼量計算
+*/1 * * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs codeAmount
+
+#用戶返水計算
+00 14 * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs userRakeback
+
+#統計用戶下注報表
+*/10 * * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs dailyUserReport
+
+#每日統計
+05 00 * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs dailySchedule
+
+#資金匯總
+10 * * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs digest
+
+#投注熱度虛擬下注
+*/1 * * * * php /home/wwwroot2/caipiao_master/backend/cli.php crontabs predictionBet
+
+
+
+#牛牛 Swoole
+php /home/wwwroot2/caipiao_master/frontend/cli.php special niuniu 1 
+#搶莊牛牛 Swoole
+php /home/wwwroot2/caipiao_master/frontend/cli.php special niuniu 2
+
+
+php.ini設定
+mysqli.reconnect = On

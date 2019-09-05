@@ -1,0 +1,420 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#tab{
+    width: 100%;
+    background: #1da01dfc; 
+    
+
+    margin-bottom: 5px;
+    }
+    /* 頁籤ul */#tab>ul{
+    overflow: hidden;
+    margin: 0;
+        padding: 0px 20px 0 20px;
+    }
+    #tab>ul>li{
+    list-style-type: none;
+    
+    }
+    #tab>ul>li>a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    border-radius:5px;     
+    }
+    #tab ul li .active {
+        background-color: #fff;
+        color: #000;       
+    }
+    #tab>ul>li>a p{
+    display: inline-block;
+    }
+    #tab>ul>li>a .red{
+    color: red;
+    }
+    #tab>ul>li>a .blue{
+        color: blue;
+        }
+    /*頁籤div內容*/
+    #tab>div {
+        clear:both;
+        padding:0 15px;
+        height:0;
+        overflow:hidden;
+        visibility:hidden;
+        -webkit-transition:all .4s ease-in-out;
+        -moz-transition:all .4s ease-in-out;
+        -ms-transition:all .4s ease-in-out;
+        -o-transition:all .4s ease-in-out;
+        transition:all .4s ease-in-out;
+    }
+.nav_bar {
+    list-style: none;
+    padding-left: 0;
+    width: 9%;
+    display: inline-block;
+    margin-right: 10px;
+}
+.nav_bar li {
+    width: 100%;
+    padding: 12px 0px;
+    text-align: center;
+    border: 1px solid #000;
+    font-weight: 800;
+	cursor: pointer;
+}
+.nav_bar :active{
+    background-color: yellow;
+}
+.nav_bar .title {
+    color: purple;
+    background-color: #8bc34ab3;
+    font-weight: 800;
+	cursor: default;
+}
+.nav_bar .highlight{
+    background-color: #FFFCA6;
+}
+.nav_bar li span {
+    color: red;
+}
+.main {
+    width: 90%;
+    height: 65px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #8bc34ab3;
+    border: 1px solid #000;
+}
+.top ul {
+    list-style: none;
+    display: block;
+}
+.top ul li {
+    display: inline-block;
+    padding: 5px;
+}
+.top ul .qishu {
+    width: 16%;
+    font-weight: 800;
+}
+.top ul .qishu_list {
+    font-weight: 800;
+}
+.top ul .qishu_list .color_blue {
+    color: #000;
+    border: 2px solid #00b5f1;
+    border-radius: 50px;
+}
+.top ul .qishu_list .color_red {
+    color: #000;
+    border: 2px solid red;
+    border-radius: 50px;
+}
+.top ul .qishu_list .color_green {
+    color: #000;
+    border: 2px solid greenyellow;
+    border-radius: 50px;
+}
+.top ul li span {
+
+}
+.top ul li strong {
+    color: blue;
+}
+.bottom {
+    text-align: right;
+    margin-top: 15px;
+
+}
+.bottom ul {
+    list-style: none;
+    display: block;
+}
+.bottom ul li {
+    display: inline-block;
+}
+.bottom ul .update {
+    width: 20%;
+}
+.bottom ul .arrange select {
+    color: red;
+}
+
+
+.data {
+    margin-top: 10px;
+}
+.data li {
+    width: 472.5px;
+}
+.data .title {
+    width: 100%;
+    display: inline-block;
+    background-color: #8bc34ab3;
+}
+.data .title > div {
+    text-align: center;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #000; 
+    line-height: 2;
+    height: 30px;
+}
+.data .title .number {
+    width: 10%;  
+}
+.data .title .odds {
+    width: 38.5%;;
+}
+.data .title .total {
+    width: 10%;
+}
+.data .title .profit {
+    width: 20%;
+}
+.data .title .unknow {
+    width: 10%;
+}
+.data .title .done {
+    width: 10%;
+}
+.data .contain {
+    width: 100%;
+    clear: both;
+}
+.data .contain >div {
+    float: left; 
+    text-align: center; 
+    line-height: 2;
+    height: 33px; 
+    box-sizing: border-box;
+    border: 1px solid #000; 
+}
+.data .contain >div >button {
+    background-color: #fff;
+    border: 1px solid gray;
+	line-height: none;
+	margin: 0 3px 0 3px;
+}
+.data .contain >div > .btn_add {
+    color: red;
+}
+.data .contain .number {
+    height: 33px;
+    width: 10%;  
+}
+.data .contain .number .color_red {
+    font-weight: 800;
+    border: 2px solid red;
+    width: 26px;
+    border-radius: 50px;
+
+}
+.data .contain .number .color_blue {
+    font-weight: 800;
+    border: 2px solid #00b5f1;
+    width: 26px;
+    border-radius: 50px;
+
+}
+.data .contain .number .color_green {
+    font-weight: 800;
+    border: 2px solid greenyellow;
+    width: 26px;
+    border-radius: 50px;
+
+}
+.data .contain .odds {
+    justify-content: space-between;
+    width: 38.5%;
+}
+.data .contain .odds button {
+	cursor: pointer;
+}
+.data .contain .total {
+    width: 10%;
+}
+.data .contain .profit {
+    width: 20%;
+}
+.data .contain .unknow {
+    width: 10%;
+}
+.data .contain .done {
+    width: 10%;
+}
+.block {
+    display: block;
+    float: left;
+    width: 33.33%;
+}
+.block.large {
+    display: block;
+    float: left;
+    width: 100%;
+}
+.play_panel {
+    margin-top: 10px;
+    padding: 10px;
+    /* background-color: pink; */
+}
+.play_panel .play_group{
+    width: 24.7%;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0 10px 0;
+    background: #f7f7f7;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee; 
+}
+.play_panel .play_group.large{
+    width: 100%;
+}
+/* .play_panel .play_group.large .contain{
+    display: block;
+    float: left;
+    width: 25%;
+} */
+.play_panel .play_group.large .sub_title {
+    width: 25%;
+    display: block;
+    float: left;
+}
+.play_panel .play_group.large .item {
+    width: 25%;
+    display: block;
+    float: left;
+}
+.play_panel .play_group .group_title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    padding: 7px 0;
+    text-align: center;
+    background: rgba(245, 166, 75, 0.702); 
+}
+.play_panel .play_group .sub_title {
+    display: block;
+    height: 40px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    background-color: hsl(32, 86%, 53%);
+}
+.play_panel .play_group .sub_title span {
+    border-right: 1px solid #fff;
+}
+.play_panel .play_group .item{
+    display: block;
+    height: 40px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.play_panel .play_group span{
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.play_panel .play_group .name {
+    width: 16%;
+}
+.play_panel .play_group .name span{
+    float: none;
+    display: inline-block;
+    border: none;
+}
+.play_panel .play_group .odds { 
+    width: 39%; 
+    font-weight: normal;
+}
+.play_panel .play_group .item .odds button {
+    background-color: #eee;
+    border: 1px solid gray;
+	line-height: 20px;
+}
+.play_panel .play_group .item .odds .add {
+    color: red;
+}
+.play_panel .play_group .odds .odds_value {
+    float: none;
+    display: inline-block;
+    border: none;
+}
+.play_panel .play_group .item .odds .less {
+
+}
+.play_panel .play_group .total { 
+    width: 10%; 
+}
+.play_panel .play_group .profit { 
+    width: 15%; 
+}
+.play_panel .play_group .unknow { 
+    width: 10%; 
+}
+.play_panel .play_group  .done { 
+    width: 10%; 
+}
