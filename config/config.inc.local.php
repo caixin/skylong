@@ -1,13 +1,9 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
-$db['default']['hostname'] = '47.244.28.1';
+$db['default']['hostname'] = '192.168.99.100';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'ShouldQuitLeeco"6869';
-//$db['default']['hostname'] = '127.0.0.1';
-//$db['default']['username'] = 'root';
-//$db['default']['password'] = '1234';
-
-$db['default']['database'] = 'new_project';
+$db['default']['password'] = '1234';
+$db['default']['database'] = 'lottery';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = false;
