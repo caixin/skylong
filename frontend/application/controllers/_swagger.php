@@ -8,7 +8,7 @@
 
 /**
  * @OA\Server(
- *   url="{schema}://newprojectapi",
+ *   url="{schema}://lotteryapi",
  *   description="本機開發",
  *   @OA\ServerVariable(
  *       serverVariable="schema",
