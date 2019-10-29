@@ -1,0 +1,26 @@
+﻿#彩種期數錄入
+01 00 * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs writeQishu
+
+#香港六合彩期數錄入
+05 00 01 * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs writeQishuHkmk6
+
+#自訂彩種開獎
+*/1 * * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs customLotteryOpen
+
+#打碼量計算
+*/1 * * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs codeAmount
+
+#用戶返水計算
+00 14 * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs userRakeback
+
+#統計用戶下注報表
+*/10 * * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs dailyUserReport
+
+#每日統計
+05 00 * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs dailySchedule
+
+#資金匯總
+10 * * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs digest
+
+#投注熱度虛擬下注
+*/1 * * * * /usr/local/bin/php /usr/share/nginx/html/lottery/backend/cli.php crontabs predictionBet
