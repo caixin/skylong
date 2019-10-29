@@ -16,7 +16,9 @@
 		"phpoffice/phpexcel": "^1.8",
 		"zircote/swagger-php": "^3.0",
 		"overtrue/chinese-calendar": "^1.0",
-		"telegram-bot/api": "^2.3"
+		"telegram-bot/api": "^2.3",
+		"janiaje/benchmark": "^1.0",
+		"guojikai/plunar": "^1.1"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
