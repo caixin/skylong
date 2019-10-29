@@ -8,8 +8,8 @@
 
 /**
  * @OA\Server(
- *   url="{schema}://lotteryapi",
- *   description="本機開發",
+ *   url="{schema}://caixinwork.tk",
+ *   description="測試機",
  *   @OA\ServerVariable(
  *       serverVariable="schema",
  *       enum={"https", "http"},
@@ -20,8 +20,8 @@
 
 /**
  * @OA\Server(
- *   url="{schema}://wap.tlmaster.com",
- *   description="測試機",
+ *   url="{schema}://lotteryapi",
+ *   description="本機開發",
  *   @OA\ServerVariable(
  *       serverVariable="schema",
  *       enum={"https", "http"},
