@@ -1,0 +1,10 @@
+FROM php:7.1-fpm
+
+RUN apt-get update \
+	&& apt-get install -y iputils-ping \
+	&& pecl install redis-4.3.0 \
+	&& pecl install swoole \
+	&& docker-php-ext-install mysqli \
+	&& docker-php-ext-enable mysqli redis swoole
+
+EXPOSE 9000
