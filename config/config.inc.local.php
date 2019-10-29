@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') || exit('No direct script access allowed');
 
-$db['default']['hostname'] = '192.168.99.100';
+$db['default']['hostname'] = '3.16.216.73';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '1234';
+$db['default']['password'] = '123456';
 $db['default']['database'] = 'lottery';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
