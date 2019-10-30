@@ -15,9 +15,4 @@ ADD lottery-cron /etc/cron.d/lottery-cron
 RUN chmod 0644 /etc/cron.d/lottery-cron
 RUN /usr/bin/crontab /etc/cron.d/lottery-cron
 
-ADD start.sh /start.sh
-RUN chmod 777 /start.sh
-
-ENTRYPOINT ["./start.sh"]
-
 EXPOSE 9000
