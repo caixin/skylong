@@ -1,10 +1,23 @@
 FROM php:7.1-fpm
 
 RUN apt-get update \
-	&& apt-get install -y iputils-ping \
+	&& apt-get install -y cron \
 	&& pecl install redis-4.3.0 \
 	&& pecl install swoole \
 	&& docker-php-ext-install mysqli bcmath \
 	&& docker-php-ext-enable mysqli redis swoole
+
+# create cron log
+RUN touch /var/log/cron.log
+
+# add crontab file
+ADD lottery-cron /etc/cron.d/lottery-cron
+RUN chmod 0644 /etc/cron.d/lottery-cron
+RUN /usr/bin/crontab /etc/cron.d/lottery-cron
+
+ADD start.sh /start.sh
+RUN chmod 777 /start.sh
+
+ENTRYPOINT ["./start.sh"]
 
 EXPOSE 9000

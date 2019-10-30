@@ -9,6 +9,7 @@ services:
     volumes:
       - '$PWD/nginx/:/etc/nginx/conf.d/'
       - '$PWD/../:/usr/share/nginx/html/'
+      - '$PWD/logs/nginx:/var/log'
     networks:
       - lottery_net
     container_name: 'lottery-nginx'
@@ -19,6 +20,7 @@ services:
       - '9000:9000'
     volumes:
       - '$PWD/../:/usr/share/nginx/html/'
+      - '$PWD/logs/php:/var/log'
     networks:
       - lottery_net
     container_name: 'lottery-php'

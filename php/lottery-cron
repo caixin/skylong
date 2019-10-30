@@ -1,0 +1,26 @@
+﻿#彩種期數錄入
+01 00 * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs writeQishu 2>&1 >> /var/log/cron.log
+
+#香港六合彩期數錄入
+05 00 01 * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs writeQishuHkmk6 2>&1 >> /var/log/cron.log
+
+#自訂彩種開獎
+*/1 * * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs customLotteryOpen 2>&1 >> /var/log/cron.log
+
+#打碼量計算
+*/1 * * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs codeAmount 2>&1 >> /var/log/cron.log
+
+#用戶返水計算
+00 14 * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs userRakeback 2>&1 >> /var/log/cron.log
+
+#統計用戶下注報表
+*/10 * * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs dailyUserReport 2>&1 >> /var/log/cron.log
+
+#每日統計
+05 00 * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs dailySchedule 2>&1 >> /var/log/cron.log
+
+#資金匯總
+10 * * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs digest 2>&1 >> /var/log/cron.log
+
+#投注熱度虛擬下注
+*/1 * * * * . /root/project_env.sh;/usr/local/bin/php -f /usr/share/nginx/html/lottery/backend/cli.php crontabs predictionBet 2>&1 >> /var/log/cron.log
