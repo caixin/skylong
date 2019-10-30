@@ -83,7 +83,7 @@ class Ettm_lottery_open_model extends CI_Model
             Monolog::writeLogs($return_point_dir, 200, "经典-$lottery[name]-期数:$qishu-执行結果:$result-结束!");
             //熱門預測
             $prediction_lottery = $this->prediction_db->getPredictionLottery();
-            if (in_array($lottery_id,$prediction_lottery)) {
+            if (in_array($lottery_id, $prediction_lottery)) {
                 Monolog::writeLogs($prediction_dir, 200, "经典-$lottery[name]-期数:$qishu-开始执行!");
                 $result = $this->prediction_buy_db->settlement($lottery_id, $qishu, $numbers, $record['lottery_time']);
                 Monolog::writeLogs($prediction_dir, 200, "经典-$lottery[name]-期数:$qishu-执行結果:$result-结束!");
@@ -371,11 +371,12 @@ class Ettm_lottery_open_model extends CI_Model
                     $result = 0;
                     break;
             }
+            /*
             if (class_exists('swoole_client')) {
                 $this->swooleCat($row, $qishu);
             } else {
                 Monolog::writeLogs('SwooleCat', 200, 'Error:尚未安装Swoole扩展!');
-            }
+            }*/
             Monolog::writeLogs($Monolog_dir, 200, "特色-$lottery[name]-" . ettm_special_model::$typeList[$row['type']] . "-期数:$qishu-结束!");
         }
         return $result;
@@ -549,7 +550,7 @@ class Ettm_lottery_open_model extends CI_Model
                 $_sum_value += $numbers[$key];
             }
 
-            if (strpos($formula,'84') !== false && $_sum_value == 84) {
+            if (strpos($formula, '84') !== false && $_sum_value == 84) {
                 //總和大小和局
                 $is_lose_win = 2;
             } else {
@@ -749,7 +750,7 @@ class Ettm_lottery_open_model extends CI_Model
         //豹子通殺
         $pass_kill = $numbers[2] == $numbers[1] && $numbers[1] == $numbers[0] ? 1 : 0;
         //豹子
-        if ($pass_kill && (implode(',',$numbers) == $bet_values || $bet_values == '全骰')) {
+        if ($pass_kill && (implode(',', $numbers) == $bet_values || $bet_values == '全骰')) {
             return 1;
         }
 
@@ -1086,7 +1087,7 @@ class Ettm_lottery_open_model extends CI_Model
         if ($key_word == 'three_Back_T_Diff' || $key_word == 'three_Back_T_Sum' || $key_word == 'two_Front_Sum' || $key_word == 'two_Back_Sum') {
             $bet_arr['bet_number'] = $bet_values;
             $bet_arr['open_number'] = implode(',', $numbers);
-            //此玩法的投注内容需要特殊处理
+        //此玩法的投注内容需要特殊处理
         } elseif ($key_word == 'dw_Gall' || $key_word == 'arbitrary_Choice_Direct_Two' || $key_word == 'arbitrary_Choice_Direct_Three' || $key_word == 'arbitrary_Choice_Direct_Four') {
             $bet_values = explode('|', $bet_values);
             foreach ($bet_values as $i => &$value) {
@@ -1786,7 +1787,7 @@ class Ettm_lottery_open_model extends CI_Model
         if ($key_word == 'low_Three_Direct_Sum') {
             $bet_arr['bet_number'] = $bet_values;
             $bet_arr['open_number'] = implode(',', $numbers);
-            //此玩法的投注内容需要特殊处理
+        //此玩法的投注内容需要特殊处理
         } elseif ($key_word == 'dw_Gall') {
             $bet_values = explode('|', $bet_values);
             foreach ($bet_values as $i => &$value) {
@@ -2599,7 +2600,7 @@ class Ettm_lottery_open_model extends CI_Model
 
     /**
      * 官方低频彩系列中奖公式计算.
-     * 
+     *
      * @param array $numbers 開獎號碼
      * @param float $p_key_word 父層Keyword
      * @param array $key_word Keyword
@@ -2735,7 +2736,7 @@ class Ettm_lottery_open_model extends CI_Model
                 //定位 低频彩系列 定位胆
                 if ($key_word == 'low_Dw') {
                     foreach (explode('|', $bet_values) as $key => $values) {
-                        if (in_array($numbers[$key],explode(',', $values))) {
+                        if (in_array($numbers[$key], explode(',', $values))) {
                             $number++;
                         }
                     }
@@ -3074,7 +3075,7 @@ class Ettm_lottery_open_model extends CI_Model
             $host = $this->site_config['swoole_ip'];
             $port = $this->site_config['swoole_port'] + $special['type'];
             Monolog::writeLogs('SwooleCat', 200, 'HOST:' . $host . ' PORT:' . $port);
-            $this->load->library('websocket',[
+            $this->load->library('websocket', [
                 'host' => $host,
                 'port' => $port
             ]);
